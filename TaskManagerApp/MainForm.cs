@@ -104,7 +104,7 @@ namespace TaskManagerApp
             PopulateComboBoxes();
             RefreshGrids();
         }
-
+        // this method is used to update the person
         private void buttonUpdatePerson_Click(object sender, EventArgs e)
         {
             if (dataGridViewPersons.CurrentRow != null)
