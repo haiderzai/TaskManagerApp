@@ -1,4 +1,4 @@
-# Project-ManagementApp
+# Task Management Application
 A simple yet powerful Windows Forms application built with C# and .NET for managing tasks and persons. It includes full CRUD functionality, CSV data storage, filtering, sorting, a visual progress bar, chart display, export to Excel/PDF, and a clean, user-friendly interface. Ideal for tracking task status, deadlines, and responsibilities in personal or team projects.
 
 
