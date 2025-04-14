@@ -70,7 +70,7 @@ namespace TaskManagerApp
             // dataGridViewPersons
             // 
             dataGridViewPersons.ColumnHeadersHeight = 34;
-            dataGridViewPersons.Location = new System.Drawing.Point(20, 20);
+            dataGridViewPersons.Location = new System.Drawing.Point(34, 106);
             dataGridViewPersons.Name = "dataGridViewPersons";
             dataGridViewPersons.RowHeadersWidth = 62;
             dataGridViewPersons.Size = new System.Drawing.Size(360, 150);
@@ -87,184 +87,184 @@ namespace TaskManagerApp
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dataGridViewTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewTasks.ColumnHeadersHeight = 34;
-            dataGridViewTasks.Location = new System.Drawing.Point(400, 20);
+            dataGridViewTasks.Location = new System.Drawing.Point(440, 106);
             dataGridViewTasks.Name = "dataGridViewTasks";
             dataGridViewTasks.RowHeadersWidth = 62;
-            dataGridViewTasks.Size = new System.Drawing.Size(600, 250);
+            dataGridViewTasks.Size = new System.Drawing.Size(800, 236);
             dataGridViewTasks.TabIndex = 1;
             // 
             // textBoxPersonName
             // 
-            textBoxPersonName.Location = new System.Drawing.Point(20, 180);
+            textBoxPersonName.Location = new System.Drawing.Point(34, 291);
             textBoxPersonName.Name = "textBoxPersonName";
-            textBoxPersonName.Size = new System.Drawing.Size(100, 31);
+            textBoxPersonName.Size = new System.Drawing.Size(101, 31);
             textBoxPersonName.TabIndex = 2;
             // 
             // dateTimePickerBirthday
             // 
-            dateTimePickerBirthday.Location = new System.Drawing.Point(20, 210);
+            dateTimePickerBirthday.Location = new System.Drawing.Point(34, 321);
             dateTimePickerBirthday.Name = "dateTimePickerBirthday";
-            dateTimePickerBirthday.Size = new System.Drawing.Size(200, 31);
+            dateTimePickerBirthday.Size = new System.Drawing.Size(201, 31);
             dateTimePickerBirthday.TabIndex = 3;
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new System.Drawing.Point(20, 240);
+            textBoxEmail.Location = new System.Drawing.Point(34, 351);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new System.Drawing.Size(100, 31);
+            textBoxEmail.Size = new System.Drawing.Size(101, 31);
             textBoxEmail.TabIndex = 4;
             // 
             // buttonAddPerson
             // 
-            buttonAddPerson.Location = new System.Drawing.Point(20, 270);
+            buttonAddPerson.Location = new System.Drawing.Point(34, 381);
             buttonAddPerson.Name = "buttonAddPerson";
-            buttonAddPerson.Size = new System.Drawing.Size(75, 23);
+            buttonAddPerson.Size = new System.Drawing.Size(76, 32);
             buttonAddPerson.TabIndex = 5;
             buttonAddPerson.Text = "Add Person";
             buttonAddPerson.Click += buttonAddPerson_Click;
             // 
             // buttonUpdatePerson
             // 
-            buttonUpdatePerson.Location = new System.Drawing.Point(120, 270);
+            buttonUpdatePerson.Location = new System.Drawing.Point(134, 381);
             buttonUpdatePerson.Name = "buttonUpdatePerson";
-            buttonUpdatePerson.Size = new System.Drawing.Size(75, 23);
+            buttonUpdatePerson.Size = new System.Drawing.Size(76, 32);
             buttonUpdatePerson.TabIndex = 6;
             buttonUpdatePerson.Text = "Update Person";
             buttonUpdatePerson.Click += buttonUpdatePerson_Click;
             // 
             // buttonDeletePerson
             // 
-            buttonDeletePerson.Location = new System.Drawing.Point(220, 270);
+            buttonDeletePerson.Location = new System.Drawing.Point(234, 381);
             buttonDeletePerson.Name = "buttonDeletePerson";
-            buttonDeletePerson.Size = new System.Drawing.Size(75, 23);
+            buttonDeletePerson.Size = new System.Drawing.Size(76, 32);
             buttonDeletePerson.TabIndex = 7;
             buttonDeletePerson.Text = "Delete Person";
             buttonDeletePerson.Click += buttonDeletePerson_Click;
             // 
             // textBoxTaskName
             // 
-            textBoxTaskName.Location = new System.Drawing.Point(400, 280);
+            textBoxTaskName.Location = new System.Drawing.Point(488, 351);
             textBoxTaskName.Name = "textBoxTaskName";
-            textBoxTaskName.Size = new System.Drawing.Size(100, 31);
+            textBoxTaskName.Size = new System.Drawing.Size(103, 31);
             textBoxTaskName.TabIndex = 8;
             // 
             // textBoxDescription
             // 
-            textBoxDescription.Location = new System.Drawing.Point(400, 310);
+            textBoxDescription.Location = new System.Drawing.Point(488, 381);
             textBoxDescription.Name = "textBoxDescription";
-            textBoxDescription.Size = new System.Drawing.Size(100, 31);
+            textBoxDescription.Size = new System.Drawing.Size(103, 31);
             textBoxDescription.TabIndex = 9;
             // 
             // dateTimePickerStart
             // 
-            dateTimePickerStart.Location = new System.Drawing.Point(400, 340);
+            dateTimePickerStart.Location = new System.Drawing.Point(488, 411);
             dateTimePickerStart.Name = "dateTimePickerStart";
-            dateTimePickerStart.Size = new System.Drawing.Size(200, 31);
+            dateTimePickerStart.Size = new System.Drawing.Size(203, 31);
             dateTimePickerStart.TabIndex = 10;
             // 
             // dateTimePickerDue
             // 
-            dateTimePickerDue.Location = new System.Drawing.Point(400, 370);
+            dateTimePickerDue.Location = new System.Drawing.Point(488, 441);
             dateTimePickerDue.Name = "dateTimePickerDue";
-            dateTimePickerDue.Size = new System.Drawing.Size(200, 31);
+            dateTimePickerDue.Size = new System.Drawing.Size(203, 31);
             dateTimePickerDue.TabIndex = 11;
             // 
             // comboBoxResponsible
             // 
-            comboBoxResponsible.Location = new System.Drawing.Point(400, 400);
+            comboBoxResponsible.Location = new System.Drawing.Point(488, 471);
             comboBoxResponsible.Name = "comboBoxResponsible";
-            comboBoxResponsible.Size = new System.Drawing.Size(121, 33);
+            comboBoxResponsible.Size = new System.Drawing.Size(124, 33);
             comboBoxResponsible.TabIndex = 12;
             // 
             // comboBoxStatus
             // 
-            comboBoxStatus.Location = new System.Drawing.Point(400, 430);
+            comboBoxStatus.Location = new System.Drawing.Point(488, 501);
             comboBoxStatus.Name = "comboBoxStatus";
-            comboBoxStatus.Size = new System.Drawing.Size(121, 33);
+            comboBoxStatus.Size = new System.Drawing.Size(124, 33);
             comboBoxStatus.TabIndex = 13;
             // 
             // buttonAddTask
             // 
-            buttonAddTask.Location = new System.Drawing.Point(400, 460);
+            buttonAddTask.Location = new System.Drawing.Point(488, 531);
             buttonAddTask.Name = "buttonAddTask";
-            buttonAddTask.Size = new System.Drawing.Size(75, 23);
+            buttonAddTask.Size = new System.Drawing.Size(78, 37);
             buttonAddTask.TabIndex = 14;
             buttonAddTask.Text = "Add Task";
             buttonAddTask.Click += buttonAddTask_Click;
             // 
             // buttonUpdateTask
             // 
-            buttonUpdateTask.Location = new System.Drawing.Point(500, 460);
+            buttonUpdateTask.Location = new System.Drawing.Point(588, 531);
             buttonUpdateTask.Name = "buttonUpdateTask";
-            buttonUpdateTask.Size = new System.Drawing.Size(75, 23);
+            buttonUpdateTask.Size = new System.Drawing.Size(78, 37);
             buttonUpdateTask.TabIndex = 15;
             buttonUpdateTask.Text = "Update Task";
             buttonUpdateTask.Click += buttonUpdateTask_Click;
             // 
             // buttonDeleteTask
             // 
-            buttonDeleteTask.Location = new System.Drawing.Point(600, 460);
+            buttonDeleteTask.Location = new System.Drawing.Point(688, 531);
             buttonDeleteTask.Name = "buttonDeleteTask";
-            buttonDeleteTask.Size = new System.Drawing.Size(75, 23);
+            buttonDeleteTask.Size = new System.Drawing.Size(78, 37);
             buttonDeleteTask.TabIndex = 16;
             buttonDeleteTask.Text = "Delete Task";
             buttonDeleteTask.Click += buttonDeleteTask_Click;
             // 
             // comboBoxFilterStatus
             // 
-            comboBoxFilterStatus.Location = new System.Drawing.Point(20, 320);
+            comboBoxFilterStatus.Location = new System.Drawing.Point(34, 431);
             comboBoxFilterStatus.Name = "comboBoxFilterStatus";
-            comboBoxFilterStatus.Size = new System.Drawing.Size(121, 33);
+            comboBoxFilterStatus.Size = new System.Drawing.Size(122, 33);
             comboBoxFilterStatus.TabIndex = 17;
             // 
             // buttonFilter
             // 
-            buttonFilter.Location = new System.Drawing.Point(180, 320);
+            buttonFilter.Location = new System.Drawing.Point(194, 431);
             buttonFilter.Name = "buttonFilter";
-            buttonFilter.Size = new System.Drawing.Size(75, 23);
+            buttonFilter.Size = new System.Drawing.Size(76, 32);
             buttonFilter.TabIndex = 18;
             buttonFilter.Text = "Filter";
             buttonFilter.Click += buttonFilter_Click;
             // 
             // buttonSortByName
             // 
-            buttonSortByName.Location = new System.Drawing.Point(20, 360);
+            buttonSortByName.Location = new System.Drawing.Point(34, 471);
             buttonSortByName.Name = "buttonSortByName";
-            buttonSortByName.Size = new System.Drawing.Size(75, 23);
+            buttonSortByName.Size = new System.Drawing.Size(76, 32);
             buttonSortByName.TabIndex = 19;
             buttonSortByName.Text = "Sort by Name";
             buttonSortByName.Click += buttonSortByName_Click;
             // 
             // buttonSortByDueDate
             // 
-            buttonSortByDueDate.Location = new System.Drawing.Point(180, 360);
+            buttonSortByDueDate.Location = new System.Drawing.Point(194, 471);
             buttonSortByDueDate.Name = "buttonSortByDueDate";
-            buttonSortByDueDate.Size = new System.Drawing.Size(75, 23);
+            buttonSortByDueDate.Size = new System.Drawing.Size(76, 32);
             buttonSortByDueDate.TabIndex = 20;
             buttonSortByDueDate.Text = "Sort by Due Date";
             buttonSortByDueDate.Click += buttonSortByDueDate_Click;
             // 
             // textBoxSearch
             // 
-            textBoxSearch.Location = new System.Drawing.Point(20, 400);
+            textBoxSearch.Location = new System.Drawing.Point(34, 511);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new System.Drawing.Size(100, 31);
+            textBoxSearch.Size = new System.Drawing.Size(101, 31);
             textBoxSearch.TabIndex = 21;
             // 
             // buttonSearchTask
             // 
-            buttonSearchTask.Location = new System.Drawing.Point(180, 400);
+            buttonSearchTask.Location = new System.Drawing.Point(194, 511);
             buttonSearchTask.Name = "buttonSearchTask";
-            buttonSearchTask.Size = new System.Drawing.Size(75, 23);
+            buttonSearchTask.Size = new System.Drawing.Size(76, 32);
             buttonSearchTask.TabIndex = 22;
             buttonSearchTask.Text = "Search Task";
             buttonSearchTask.Click += buttonSearchTask_Click;
             // 
             // labelTaskProgress
             // 
-            labelTaskProgress.Location = new System.Drawing.Point(20, 440);
+            labelTaskProgress.Location = new System.Drawing.Point(34, 551);
             labelTaskProgress.Name = "labelTaskProgress";
-            labelTaskProgress.Size = new System.Drawing.Size(300, 20);
+            labelTaskProgress.Size = new System.Drawing.Size(301, 29);
             labelTaskProgress.TabIndex = 23;
             labelTaskProgress.Text = "Task Manager - Progress Overview";
             // 

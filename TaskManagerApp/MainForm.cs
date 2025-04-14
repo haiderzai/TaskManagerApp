@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,6 +19,12 @@ namespace TaskManagerApp
             LoadData();
             PopulateComboBoxes();
             RefreshGrids();
+
+            dataGridViewPersons.CellClick += DataGridViewPersons_CellClick;
+            dataGridViewPersons.CellDoubleClick += DataGridViewPersons_CellClick;
+
+            dataGridViewTasks.CellClick += DataGridViewTasks_CellClick;
+            dataGridViewTasks.CellDoubleClick += DataGridViewTasks_CellClick;
         }
 
         private void LoadData()
@@ -57,8 +62,8 @@ namespace TaskManagerApp
 
         private void SaveData()
         {
-            File.WriteAllLines(personFile, persons.Select(p => $"{p.Name},{p.Birthday.ToShortDateString()},{p.Email}")); 
-            File.WriteAllLines(taskFile, tasks.Select(t => $"{t.Name},{t.Description},{t.StartDate.ToShortDateString()},{t.DueDate.ToShortDateString()},{t.ResponsiblePerson?.Email},{t.Status}")); 
+            File.WriteAllLines(personFile, persons.Select(p => $"{p.Name},{p.Birthday.ToShortDateString()},{p.Email}"));
+            File.WriteAllLines(taskFile, tasks.Select(t => $"{t.Name},{t.Description},{t.StartDate.ToShortDateString()},{t.DueDate.ToShortDateString()},{t.ResponsiblePerson?.Email},{t.Status}"));
         }
 
         private void PopulateComboBoxes()
@@ -91,8 +96,49 @@ namespace TaskManagerApp
             }).ToList();
         }
 
+        private void ClearPersonInputs()
+        {
+            textBoxPersonName.Clear();
+            textBoxEmail.Clear();
+            dateTimePickerBirthday.Value = DateTime.Today;
+        }
+
+        private void ClearTaskInputs()
+        {
+            textBoxTaskName.Clear();
+            textBoxDescription.Clear();
+            dateTimePickerStart.Value = DateTime.Today;
+            dateTimePickerDue.Value = DateTime.Today;
+            comboBoxResponsible.SelectedIndex = -1;
+            comboBoxStatus.SelectedIndex = -1;
+        }
+
+        private bool ValidatePersonInputs()
+        {
+            if (string.IsNullOrWhiteSpace(textBoxPersonName.Text) || string.IsNullOrWhiteSpace(textBoxEmail.Text))
+            {
+                MessageBox.Show("Please enter both Name and Email for the person.");
+                return false;
+            }
+            return true;
+        }
+
+        private bool ValidateTaskInputs()
+        {
+            if (string.IsNullOrWhiteSpace(textBoxTaskName.Text) ||
+                comboBoxResponsible.SelectedIndex == -1 ||
+                comboBoxStatus.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please fill in Task Name, assign a Responsible Person, and select a Status.");
+                return false;
+            }
+            return true;
+        }
+
         private void buttonAddPerson_Click(object sender, EventArgs e)
         {
+            if (!ValidatePersonInputs()) return;
+
             persons.Add(new Person
             {
                 Name = textBoxPersonName.Text,
@@ -103,10 +149,13 @@ namespace TaskManagerApp
             SaveData();
             PopulateComboBoxes();
             RefreshGrids();
+            ClearPersonInputs();
         }
-        // this method is used to update the person
+
         private void buttonUpdatePerson_Click(object sender, EventArgs e)
         {
+            if (!ValidatePersonInputs()) return;
+
             if (dataGridViewPersons.CurrentRow != null)
             {
                 string email = dataGridViewPersons.CurrentRow.Cells[2].Value.ToString();
@@ -119,6 +168,7 @@ namespace TaskManagerApp
                     SaveData();
                     PopulateComboBoxes();
                     RefreshGrids();
+                    ClearPersonInputs();
                 }
             }
         }
@@ -132,11 +182,14 @@ namespace TaskManagerApp
                 SaveData();
                 PopulateComboBoxes();
                 RefreshGrids();
+                ClearPersonInputs();
             }
         }
 
         private void buttonAddTask_Click(object sender, EventArgs e)
         {
+            if (!ValidateTaskInputs()) return;
+
             tasks.Add(new TaskItem
             {
                 Name = textBoxTaskName.Text,
@@ -149,11 +202,13 @@ namespace TaskManagerApp
 
             SaveData();
             RefreshGrids();
-            
+            ClearTaskInputs();
         }
 
         private void buttonUpdateTask_Click(object sender, EventArgs e)
         {
+            if (!ValidateTaskInputs()) return;
+
             if (dataGridViewTasks.CurrentRow != null)
             {
                 string name = dataGridViewTasks.CurrentRow.Cells[0].Value.ToString();
@@ -167,6 +222,7 @@ namespace TaskManagerApp
                     task.Status = (TaskStatus)comboBoxStatus.SelectedItem;
                     SaveData();
                     RefreshGrids();
+                    ClearTaskInputs();
                 }
             }
         }
@@ -179,6 +235,7 @@ namespace TaskManagerApp
                 tasks.RemoveAll(t => t.Name == name);
                 SaveData();
                 RefreshGrids();
+                ClearTaskInputs();
             }
         }
 
@@ -226,6 +283,33 @@ namespace TaskManagerApp
         {
             tasks = tasks.OrderBy(t => t.DueDate).ToList();
             RefreshGrids();
+        }
+
+        private void DataGridViewPersons_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var row = dataGridViewPersons.Rows[e.RowIndex];
+                textBoxPersonName.Text = row.Cells[0].Value.ToString();
+                dateTimePickerBirthday.Value = DateTime.Parse(row.Cells[1].Value.ToString());
+                textBoxEmail.Text = row.Cells[2].Value.ToString();
+                row.Selected = true;
+            }
+        }
+
+        private void DataGridViewTasks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var row = dataGridViewTasks.Rows[e.RowIndex];
+                textBoxTaskName.Text = row.Cells[0].Value.ToString();
+                textBoxDescription.Text = row.Cells[1].Value.ToString();
+                dateTimePickerStart.Value = DateTime.Parse(row.Cells[2].Value.ToString());
+                dateTimePickerDue.Value = DateTime.Parse(row.Cells[3].Value.ToString());
+                comboBoxResponsible.SelectedItem = persons.FirstOrDefault(p => p.Name == row.Cells[4].Value.ToString());
+                comboBoxStatus.SelectedItem = Enum.Parse(typeof(TaskStatus), row.Cells[5].Value.ToString());
+                row.Selected = true;
+            }
         }
     }
 
