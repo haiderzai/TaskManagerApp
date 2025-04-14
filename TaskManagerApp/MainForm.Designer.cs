@@ -38,7 +38,7 @@ namespace TaskManagerApp
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             dataGridViewPersons = new System.Windows.Forms.DataGridView();
             dataGridViewTasks = new System.Windows.Forms.DataGridView();
             textBoxPersonName = new System.Windows.Forms.TextBox();
@@ -63,6 +63,12 @@ namespace TaskManagerApp
             textBoxSearch = new System.Windows.Forms.TextBox();
             buttonSearchTask = new System.Windows.Forms.Button();
             labelTaskProgress = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPersons).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTasks).BeginInit();
             SuspendLayout();
@@ -70,24 +76,24 @@ namespace TaskManagerApp
             // dataGridViewPersons
             // 
             dataGridViewPersons.ColumnHeadersHeight = 34;
-            dataGridViewPersons.Location = new System.Drawing.Point(34, 106);
+            dataGridViewPersons.Location = new System.Drawing.Point(36, 86);
             dataGridViewPersons.Name = "dataGridViewPersons";
             dataGridViewPersons.RowHeadersWidth = 62;
-            dataGridViewPersons.Size = new System.Drawing.Size(360, 150);
+            dataGridViewPersons.Size = new System.Drawing.Size(428, 178);
             dataGridViewPersons.TabIndex = 0;
             // 
             // dataGridViewTasks
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridViewTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridViewTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewTasks.ColumnHeadersHeight = 34;
-            dataGridViewTasks.Location = new System.Drawing.Point(440, 106);
+            dataGridViewTasks.Location = new System.Drawing.Point(470, 86);
             dataGridViewTasks.Name = "dataGridViewTasks";
             dataGridViewTasks.RowHeadersWidth = 62;
             dataGridViewTasks.Size = new System.Drawing.Size(800, 236);
@@ -95,28 +101,28 @@ namespace TaskManagerApp
             // 
             // textBoxPersonName
             // 
-            textBoxPersonName.Location = new System.Drawing.Point(34, 291);
+            textBoxPersonName.Location = new System.Drawing.Point(156, 284);
             textBoxPersonName.Name = "textBoxPersonName";
-            textBoxPersonName.Size = new System.Drawing.Size(101, 31);
+            textBoxPersonName.Size = new System.Drawing.Size(201, 31);
             textBoxPersonName.TabIndex = 2;
             // 
             // dateTimePickerBirthday
             // 
-            dateTimePickerBirthday.Location = new System.Drawing.Point(34, 321);
+            dateTimePickerBirthday.Location = new System.Drawing.Point(155, 316);
             dateTimePickerBirthday.Name = "dateTimePickerBirthday";
             dateTimePickerBirthday.Size = new System.Drawing.Size(201, 31);
             dateTimePickerBirthday.TabIndex = 3;
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new System.Drawing.Point(34, 351);
+            textBoxEmail.Location = new System.Drawing.Point(154, 350);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new System.Drawing.Size(101, 31);
+            textBoxEmail.Size = new System.Drawing.Size(202, 31);
             textBoxEmail.TabIndex = 4;
             // 
             // buttonAddPerson
             // 
-            buttonAddPerson.Location = new System.Drawing.Point(34, 381);
+            buttonAddPerson.Location = new System.Drawing.Point(154, 387);
             buttonAddPerson.Name = "buttonAddPerson";
             buttonAddPerson.Size = new System.Drawing.Size(76, 32);
             buttonAddPerson.TabIndex = 5;
@@ -125,7 +131,7 @@ namespace TaskManagerApp
             // 
             // buttonUpdatePerson
             // 
-            buttonUpdatePerson.Location = new System.Drawing.Point(134, 381);
+            buttonUpdatePerson.Location = new System.Drawing.Point(236, 387);
             buttonUpdatePerson.Name = "buttonUpdatePerson";
             buttonUpdatePerson.Size = new System.Drawing.Size(76, 32);
             buttonUpdatePerson.TabIndex = 6;
@@ -134,7 +140,7 @@ namespace TaskManagerApp
             // 
             // buttonDeletePerson
             // 
-            buttonDeletePerson.Location = new System.Drawing.Point(234, 381);
+            buttonDeletePerson.Location = new System.Drawing.Point(318, 387);
             buttonDeletePerson.Name = "buttonDeletePerson";
             buttonDeletePerson.Size = new System.Drawing.Size(76, 32);
             buttonDeletePerson.TabIndex = 7;
@@ -143,49 +149,49 @@ namespace TaskManagerApp
             // 
             // textBoxTaskName
             // 
-            textBoxTaskName.Location = new System.Drawing.Point(488, 351);
+            textBoxTaskName.Location = new System.Drawing.Point(580, 335);
             textBoxTaskName.Name = "textBoxTaskName";
             textBoxTaskName.Size = new System.Drawing.Size(103, 31);
             textBoxTaskName.TabIndex = 8;
             // 
             // textBoxDescription
             // 
-            textBoxDescription.Location = new System.Drawing.Point(488, 381);
+            textBoxDescription.Location = new System.Drawing.Point(580, 365);
             textBoxDescription.Name = "textBoxDescription";
             textBoxDescription.Size = new System.Drawing.Size(103, 31);
             textBoxDescription.TabIndex = 9;
             // 
             // dateTimePickerStart
             // 
-            dateTimePickerStart.Location = new System.Drawing.Point(488, 411);
+            dateTimePickerStart.Location = new System.Drawing.Point(580, 395);
             dateTimePickerStart.Name = "dateTimePickerStart";
             dateTimePickerStart.Size = new System.Drawing.Size(203, 31);
             dateTimePickerStart.TabIndex = 10;
             // 
             // dateTimePickerDue
             // 
-            dateTimePickerDue.Location = new System.Drawing.Point(488, 441);
+            dateTimePickerDue.Location = new System.Drawing.Point(580, 425);
             dateTimePickerDue.Name = "dateTimePickerDue";
             dateTimePickerDue.Size = new System.Drawing.Size(203, 31);
             dateTimePickerDue.TabIndex = 11;
             // 
             // comboBoxResponsible
             // 
-            comboBoxResponsible.Location = new System.Drawing.Point(488, 471);
+            comboBoxResponsible.Location = new System.Drawing.Point(580, 455);
             comboBoxResponsible.Name = "comboBoxResponsible";
             comboBoxResponsible.Size = new System.Drawing.Size(124, 33);
             comboBoxResponsible.TabIndex = 12;
             // 
             // comboBoxStatus
             // 
-            comboBoxStatus.Location = new System.Drawing.Point(488, 501);
+            comboBoxStatus.Location = new System.Drawing.Point(580, 485);
             comboBoxStatus.Name = "comboBoxStatus";
             comboBoxStatus.Size = new System.Drawing.Size(124, 33);
             comboBoxStatus.TabIndex = 13;
             // 
             // buttonAddTask
             // 
-            buttonAddTask.Location = new System.Drawing.Point(488, 531);
+            buttonAddTask.Location = new System.Drawing.Point(580, 522);
             buttonAddTask.Name = "buttonAddTask";
             buttonAddTask.Size = new System.Drawing.Size(78, 37);
             buttonAddTask.TabIndex = 14;
@@ -194,7 +200,7 @@ namespace TaskManagerApp
             // 
             // buttonUpdateTask
             // 
-            buttonUpdateTask.Location = new System.Drawing.Point(588, 531);
+            buttonUpdateTask.Location = new System.Drawing.Point(664, 522);
             buttonUpdateTask.Name = "buttonUpdateTask";
             buttonUpdateTask.Size = new System.Drawing.Size(78, 37);
             buttonUpdateTask.TabIndex = 15;
@@ -203,7 +209,7 @@ namespace TaskManagerApp
             // 
             // buttonDeleteTask
             // 
-            buttonDeleteTask.Location = new System.Drawing.Point(688, 531);
+            buttonDeleteTask.Location = new System.Drawing.Point(748, 524);
             buttonDeleteTask.Name = "buttonDeleteTask";
             buttonDeleteTask.Size = new System.Drawing.Size(78, 37);
             buttonDeleteTask.TabIndex = 16;
@@ -212,14 +218,14 @@ namespace TaskManagerApp
             // 
             // comboBoxFilterStatus
             // 
-            comboBoxFilterStatus.Location = new System.Drawing.Point(34, 431);
+            comboBoxFilterStatus.Location = new System.Drawing.Point(134, 444);
             comboBoxFilterStatus.Name = "comboBoxFilterStatus";
-            comboBoxFilterStatus.Size = new System.Drawing.Size(122, 33);
+            comboBoxFilterStatus.Size = new System.Drawing.Size(154, 33);
             comboBoxFilterStatus.TabIndex = 17;
             // 
             // buttonFilter
             // 
-            buttonFilter.Location = new System.Drawing.Point(194, 431);
+            buttonFilter.Location = new System.Drawing.Point(294, 444);
             buttonFilter.Name = "buttonFilter";
             buttonFilter.Size = new System.Drawing.Size(76, 32);
             buttonFilter.TabIndex = 18;
@@ -228,7 +234,7 @@ namespace TaskManagerApp
             // 
             // buttonSortByName
             // 
-            buttonSortByName.Location = new System.Drawing.Point(34, 471);
+            buttonSortByName.Location = new System.Drawing.Point(134, 484);
             buttonSortByName.Name = "buttonSortByName";
             buttonSortByName.Size = new System.Drawing.Size(76, 32);
             buttonSortByName.TabIndex = 19;
@@ -237,7 +243,7 @@ namespace TaskManagerApp
             // 
             // buttonSortByDueDate
             // 
-            buttonSortByDueDate.Location = new System.Drawing.Point(194, 471);
+            buttonSortByDueDate.Location = new System.Drawing.Point(294, 484);
             buttonSortByDueDate.Name = "buttonSortByDueDate";
             buttonSortByDueDate.Size = new System.Drawing.Size(76, 32);
             buttonSortByDueDate.TabIndex = 20;
@@ -246,14 +252,14 @@ namespace TaskManagerApp
             // 
             // textBoxSearch
             // 
-            textBoxSearch.Location = new System.Drawing.Point(34, 511);
+            textBoxSearch.Location = new System.Drawing.Point(134, 522);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new System.Drawing.Size(101, 31);
+            textBoxSearch.Size = new System.Drawing.Size(154, 31);
             textBoxSearch.TabIndex = 21;
             // 
             // buttonSearchTask
             // 
-            buttonSearchTask.Location = new System.Drawing.Point(194, 511);
+            buttonSearchTask.Location = new System.Drawing.Point(294, 524);
             buttonSearchTask.Name = "buttonSearchTask";
             buttonSearchTask.Size = new System.Drawing.Size(76, 32);
             buttonSearchTask.TabIndex = 22;
@@ -262,15 +268,81 @@ namespace TaskManagerApp
             // 
             // labelTaskProgress
             // 
-            labelTaskProgress.Location = new System.Drawing.Point(34, 551);
+            labelTaskProgress.Location = new System.Drawing.Point(134, 564);
             labelTaskProgress.Name = "labelTaskProgress";
             labelTaskProgress.Size = new System.Drawing.Size(301, 29);
             labelTaskProgress.TabIndex = 23;
             labelTaskProgress.Text = "Task Manager - Progress Overview";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(294, 9);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(448, 45);
+            label1.TabIndex = 24;
+            label1.Text = "Task Management Application";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(36, 284);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(62, 25);
+            label2.TabIndex = 25;
+            label2.Text = "Name";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(36, 316);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(102, 25);
+            label3.TabIndex = 25;
+            label3.Text = "Date_Birth";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label4.Location = new System.Drawing.Point(470, 338);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(49, 25);
+            label4.TabIndex = 25;
+            label4.Text = "Task";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label5.Location = new System.Drawing.Point(40, 353);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(58, 25);
+            label5.TabIndex = 25;
+            label5.Text = "Email";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label6.Location = new System.Drawing.Point(470, 371);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(109, 25);
+            label6.TabIndex = 25;
+            label6.Text = "Description";
+            // 
             // MainForm
             // 
             ClientSize = new System.Drawing.Size(1282, 642);
+            Controls.Add(label6);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label5);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(dataGridViewPersons);
             Controls.Add(dataGridViewTasks);
             Controls.Add(textBoxPersonName);
@@ -302,5 +374,11 @@ namespace TaskManagerApp
             ResumeLayout(false);
             PerformLayout();
         }
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
